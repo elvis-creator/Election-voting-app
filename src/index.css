@@ -200,6 +200,62 @@ nav {
 }
 
 
+/***********Register*************/
+.register {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.register-container {
+  width:30rem;
+  margin-top: 1.3rem;
+  padding: 1rem;
+  background: var(--color-gray-0);
+  border-radius: var(--radius-5);
+}
+.register form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+
+}
+.register form input {
+  padding: 0.7rem;
+  background: var(--color-gray-100);
+  border-radius: var(--radius-1);
+  color: var(--color-gray-900);
+}
+.register form h2 {
+  color: var(--color-primary);
+  font-weight: 500;
+
+}
+.form-error-message {
+  background: var(--color-danger);
+  color: var(--color-gray-0);
+  text-align: center;
+  padding: 0.3rem;
+  border-radius: var(--radius-1);
+  margin-top: 0.7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -245,6 +301,7 @@ nav {
 .errorPage-container {
   width: 100%;
 }
+
 
 
 

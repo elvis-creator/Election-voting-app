@@ -8,7 +8,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 
 function Navbar() {
 
-    const [showNav, setShowNav] = useState(false)
+    const [showNav, setShowNav] = useState( window.innerWidth < 600 ? false : true)
     const [darkTheme, setDarkTheme] = useState(localStorage.getItem('voting-app-theme'))
 
 //function to close nav menu on small screen when menu link is clicked 
@@ -44,12 +44,13 @@ function Navbar() {
         <div className="container nav-container">
             <Link to="/" className='nav-logo'>EL DEV</Link>
             <div>
-                { showNav &&
-                <menu>
+                { showNav && <menu>
                     <NavLink to="/election" onClick={closeNavMenu} >Elections</NavLink>
                     <NavLink to="/results" onClick={closeNavMenu} >Results</NavLink>
                     <NavLink to="/logout" onClick={closeNavMenu} >Logout</NavLink>
-                </menu> }
+                </menu>  }
+                
+                
                 <button className="theme-toggle-btn" onClick={changeTheme}> {darkTheme ? <IoMdSunny/> : <IoIosMoon/>} </button>
                 <button onClick={ ()=>{setShowNav(!showNav)} } className="nav-toggle-btn"> { showNav ? <AiOutlineClose/>:<HiOutlineBars3/>} </button>
             </div>
