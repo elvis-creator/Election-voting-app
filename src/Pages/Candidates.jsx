@@ -2,6 +2,7 @@ import React from 'react';
 import { candidates as dummyCandidates } from '../data';
 import { useParams } from 'react-router-dom';
 import Candidate from '../Components/Candidate';
+import ConfirmVote from '../Components/ConfirmVote';
 
 function Candidates() {
   const { id } = useParams();
@@ -15,6 +16,9 @@ function Candidates() {
   console.log('Filtered Candidates:', candidates); // Debugging log
 
   return (
+
+    <>
+     
     <section className="candidates">
       <header className="candidates-header">
         <h1>Vote Your Candidate</h1>
@@ -31,6 +35,8 @@ function Candidates() {
         }
       </div>
     </section>
+    <ConfirmVote/>
+    </>
   );
 }
 
