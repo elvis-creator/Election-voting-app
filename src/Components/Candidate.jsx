@@ -1,7 +1,10 @@
 import React from 'react';
 
+
 function Candidate({ image, id, fullName, motto }) {
   console.log("Candidate Props:", { image, id, fullName, motto }); // Debug props
+
+
 
   return (
     <article className="candidate">

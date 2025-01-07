@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { candidates } from "../data";
 
-
 function ConfirmVote() {
   // State to store the selected candidate
   const [modalCandidate, setModalCandidate] = useState(null);
 
-  
-
   // Fetch the selected candidate
   const fetchCandidate = () => {
-    const candidate = candidates.find((candidate) => candidate.id === "c2");
+    const candidate = candidates.find((candidate) => candidate.id === "c1");
     if (candidate) {
       setModalCandidate(candidate);
     }
@@ -18,10 +15,10 @@ function ConfirmVote() {
 
   useEffect(() => {
     fetchCandidate();
-  }, []);
+  }, []); // Empty dependency array ensures this runs once when the component mounts
 
   if (!modalCandidate) {
-
+    // Add a fallback while the candidate is being loaded
     return <div>Loading...</div>;
   }
 

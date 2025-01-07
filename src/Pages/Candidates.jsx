@@ -7,13 +7,14 @@ import ConfirmVote from '../Components/ConfirmVote';
 function Candidates() {
   const { id } = useParams();
 
-  console.log('Election ID:', id); // Debugging log
+
+  console.log('Election ID:', id); 
 
   // Ensure `id` matches candidate.election correctly
-  const electionId = id.replace(':', '').trim(); // Clean `id` if necessary
+  const electionId = id.replace(':', '').trim(); 
   const candidates = dummyCandidates.filter(candidate => candidate.election === electionId);
 
-  console.log('Filtered Candidates:', candidates); // Debugging log
+  console.log('Filtered Candidates:', candidates); 
 
   return (
 
@@ -35,7 +36,7 @@ function Candidates() {
         }
       </div>
     </section>
-    <ConfirmVote/>
+    <ConfirmVote/> 
     </>
   );
 }
